@@ -12,3 +12,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.content {
+  flex: true;
+  align-items: center;
+  justify-content: center;
+}
+
+.GamePlay {
+  flex: true;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.GameCard {
+  height: 60px;
+  width: 60px;
+  cursor: pointer;
+}

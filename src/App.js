@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
+import { Navbar, Button } from 'react-bootstrap';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Lobby  from './components/lobby/Lobby';
+import GamePlay from './components/game-play/GamePlay';
 import logo from './logo.svg';
 import './App.css';
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+         <div className="App">
+          <div className="MemoryGame">Memory Game</div>
+        
+          <Route path="/" exact component={Lobby} />
+          <Route path="/gameplay/:playSize" component={GamePlay} />
+        </div>
+      </Router>      
     );
   }
 }
