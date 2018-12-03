@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, Button } from 'react-bootstrap';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import Lobby  from './components/lobby/Lobby';
 import GamePlay from './components/game-play/GamePlay';
-import logo from './logo.svg';
 import './App.css';
 
 

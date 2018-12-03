@@ -89,7 +89,6 @@ export default class GamePlay extends Component {
 
         // }
         let updatedCards = [];
-        let toBeChanged = false;
         cards.forEach((card, index) => {
             let cardKeys = Object.keys(card.props);
             let newProps = {}
@@ -137,7 +136,7 @@ export default class GamePlay extends Component {
     render() {
       return (
         <div className="GamePlay">
-         <Link class="BackButton" to={`/`}>
+         <Link className="BackButton" to={`/`}>
             <img className="BackButtonImg" src="/images/back-button.png"></img>
          </Link>
           <div className="CardSection">

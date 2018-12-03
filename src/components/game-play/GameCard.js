@@ -27,15 +27,14 @@ export default class GameCard extends Component {
     }
 
     render() {
-        this.state.imageToShow = this.props.isFlipped ? '/images/' + this.props.pathExt : '/images/card-back.png';
+        // this.state.imageToShow = this.props.isFlipped ? '/images/' + this.props.pathExt : '/images/card-back.png';
         return (
             <img 
                 alt="memory game" 
                 className="GameCard" 
-                src={this.state.imageToShow} 
+                src={this.props.isFlipped ? '/images/' + this.props.pathExt : '/images/card-back.png'} 
                 onClick={this.flipCard}
                 style={this.props.style}
-                isFlippedItem={this.state.isFlippedItem}
             />
         )
     }
