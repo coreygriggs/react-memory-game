@@ -26,10 +26,6 @@ export default class GameCard extends Component {
         this.props.action(this);
     }
 
-    handleChange() {
-        console.log('this ran');
-    }
-
     render() {
         this.state.imageToShow = this.props.isFlipped ? '/images/' + this.props.pathExt : '/images/card-back.png';
         return (
@@ -39,7 +35,6 @@ export default class GameCard extends Component {
                 src={this.state.imageToShow} 
                 onClick={this.flipCard}
                 style={this.props.style}
-                onChange={this.handleChange}
                 isFlippedItem={this.state.isFlippedItem}
             />
         )
